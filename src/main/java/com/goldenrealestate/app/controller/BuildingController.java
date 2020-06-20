@@ -1,9 +1,7 @@
 package com.goldenrealestate.app.controller;
 
 import com.goldenrealestate.app.model.Building;
-import com.goldenrealestate.app.model.Employee;
 import com.goldenrealestate.app.repository.BuildingRepository;
-import com.goldenrealestate.app.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

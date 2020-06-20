@@ -1,22 +1,19 @@
-package com.goldenrealestate.app.model;
+package com.goldenrealestate.app.repository.dto;
 
-import javax.persistence.*;
-import java.io.Serializable;
+import com.goldenrealestate.app.model.Defect;
 
-@Entity
-@Table(name = "defect")
-public class Defect implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long defectid;
+import javax.persistence.Column;
 
-    @Column(name = "defectname")
+public class DefectDTO {
+
+
     private String defectname;
-
-
-
-    @Column(name = "defectdesc")
     private String defectdesc;
+
+    public DefectDTO(Defect defect) {
+        defectname=defect.getDefectname();
+        defectdesc=defect.getDefectdesc();
+    }
 
     public String getDefectname() {
         return defectname;

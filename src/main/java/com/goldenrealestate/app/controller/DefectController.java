@@ -1,8 +1,6 @@
 package com.goldenrealestate.app.controller;
 
-import com.goldenrealestate.app.model.Building;
 import com.goldenrealestate.app.model.Defect;
-import com.goldenrealestate.app.repository.BuildingRepository;
 import com.goldenrealestate.app.repository.DefectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
