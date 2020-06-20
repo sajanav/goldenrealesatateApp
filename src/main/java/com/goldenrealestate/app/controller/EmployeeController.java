@@ -17,17 +17,17 @@ import com.goldenrealestate.app.repository.EmployeeRepository;
 public class EmployeeController {
 
 	@Autowired
-	EmployeeRepository tutorialRepository;
+	EmployeeRepository employeeRepository;
 
 	@GetMapping("/employees")
-	public ResponseEntity<List<Employee>>getAllTutorials(@RequestParam(required = false) String title) {
+	public ResponseEntity<List<Employee>>getAllEmployees(@RequestParam(required = false) String title) {
 		try {
 				List<Employee> employees = new ArrayList<Employee>();
 
 			if (title == null)
-				tutorialRepository.findAll().forEach(employees::add);
+				employeeRepository.findAll().forEach(employees::add);
 			else
-				tutorialRepository.findByEmployeeNameContaining(title).forEach(employees::add);
+				employeeRepository.findByEmployeeNameContaining(title).forEach(employees::add);
 
 			if (employees.isEmpty()) {
 				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -41,7 +41,7 @@ public class EmployeeController {
 
 	@GetMapping("/tutorials/{id}")
 	public ResponseEntity<Employee> getTutorialById(@PathVariable("id") long id) {
-		Optional<Employee> tutorialData = tutorialRepository.findById(id);
+		Optional<Employee> tutorialData = employeeRepository.findById(id);
 
 		if (tutorialData.isPresent()) {
 			return new ResponseEntity<>(tutorialData.get(), HttpStatus.OK);
@@ -63,14 +63,14 @@ public class EmployeeController {
 
 	@PutMapping("/tutorials/{id}")
 	public ResponseEntity<Employee> updateTutorial(@PathVariable("id") long id, @RequestBody Employee tutorial) {
-		Optional<Employee> tutorialData = tutorialRepository.findById(id);
+		Optional<Employee> tutorialData = employeeRepository.findById(id);
 
 		if (tutorialData.isPresent()) {
 			Employee _tutorial = tutorialData.get();
 		/*	_tutorial.setTitle(tutorial.getTitle());
 			_tutorial.setDescription(tutorial.getDescription());
 			_tutorial.setPublished(tutorial.isPublished());*/
-			return new ResponseEntity<>(tutorialRepository.save(_tutorial), HttpStatus.OK);
+			return new ResponseEntity<>(employeeRepository.save(_tutorial), HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
@@ -79,7 +79,7 @@ public class EmployeeController {
 	@DeleteMapping("/tutorials/{id}")
 	public ResponseEntity<HttpStatus> deleteTutorial(@PathVariable("id") long id) {
 		try {
-			tutorialRepository.deleteById(id);
+			employeeRepository.deleteById(id);
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
@@ -89,7 +89,7 @@ public class EmployeeController {
 	@DeleteMapping("/tutorials")
 	public ResponseEntity<HttpStatus> deleteAllTutorials() {
 		try {
-			tutorialRepository.deleteAll();
+			employeeRepository.deleteAll();
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
