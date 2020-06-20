@@ -21,7 +21,7 @@ public class DefectController {
     DefectRepository defectRepository;
 
 
-    @GetMapping("/buildings")
+    @GetMapping("/defects")
     public ResponseEntity<List<Defect>> getAllDefects(@RequestParam(required = false) String title) {
         try {
             List<Defect> defects = new ArrayList<Defect>();

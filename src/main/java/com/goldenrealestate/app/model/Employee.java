@@ -1,10 +1,11 @@
 package com.goldenrealestate.app.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "employee")
-public class Employee{
+public class Employee implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,9 +44,6 @@ public class Employee{
 	public void setContactNo(String contactNo) {
 		this.contactNo = contactNo;
 	}
-
-
-
 
 	public Employee() {
 
