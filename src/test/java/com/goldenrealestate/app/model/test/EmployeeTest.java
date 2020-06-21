@@ -95,7 +95,6 @@ class EmployeeTest {
         configuration.addAnnotatedClass(com.goldenrealestate.app.model.Employee.class);
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(
                 configuration.getProperties()).build();
-        SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-        return sessionFactory;
+        return configuration.buildSessionFactory(serviceRegistry);
     }
 }
