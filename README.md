@@ -3,7 +3,7 @@
  
  It is built on 
  
- Java - JDK 8
+ Java - JDK 1.8
  
  Hibernate with JPA -
  
