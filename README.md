@@ -52,6 +52,12 @@ Issues faced
 2. Used spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5Dialect initially and later faced issued in connecting 
 so changed to spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL8Dialect
 
+3. I faced some issues while mapping the entity files in hibernate.cfg for junit test cases , it is resolved by below line of code in 
+  each of the test cases --> adding the specified entity classes referred by the respective Junit test class .
+  
+          configuration.addAnnotatedClass(com.goldenrealestate.app.model.ProgressBar.class);
+
+
 
 How to run 
 
