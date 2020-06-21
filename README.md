@@ -23,8 +23,11 @@
  Listed are the available APIs in this release 
  
  1.http://localhost:8080/api/progressbar--> list the progress bar details 
+ 
  2.http://localhost:8080/api/defects - list the defect details 
+ 
  3.http://localhost:8080/api/buildings -list the building details 
+ 
  4.http://localhost:8080/api/employees - list the employee details 
 
 
