@@ -1,7 +1,5 @@
 package com.goldenrealestate.app.repository.dto;
 
-import jdk.nashorn.internal.objects.annotations.Setter;
-
 import java.util.List;
 
 

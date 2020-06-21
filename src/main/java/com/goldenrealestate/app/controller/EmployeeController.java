@@ -2,7 +2,6 @@ package com.goldenrealestate.app.controller;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import com.goldenrealestate.app.model.Employee;
 import com.goldenrealestate.app.repository.EmployeeRepository;
@@ -22,17 +21,12 @@ public class EmployeeController {
 	@GetMapping("/employees")
 	public ResponseEntity<List<Employee>>getAllEmployees(@RequestParam(required = false) String title) {
 		try {
-				List<Employee> employees = new ArrayList<Employee>();
-
+				List<Employee> employees = new ArrayList<>();
 			if (title == null)
-				employeeRepository.findAll().forEach(employees::add);
-			else
-				employeeRepository.findByEmployeeNameContaining(title).forEach(employees::add);
-
+				employees.addAll(employeeRepository.findAll());
 			if (employees.isEmpty()) {
 				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 			}
-
 			return new ResponseEntity<>(employees, HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);

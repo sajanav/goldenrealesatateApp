@@ -29,6 +29,7 @@ public class ProgressBar implements Serializable {
     @JoinColumn(name ="assign_status")
     private Status status;
 
+
     public Employee getEmployee() {
         return employee;
     }
@@ -61,4 +62,11 @@ public class ProgressBar implements Serializable {
         this.status = status;
     }
 
+    public long getProgressbarid() {
+        return progressbarid;
+    }
+
+    public void setProgressbarid(long progressbarid) {
+        this.progressbarid = progressbarid;
+    }
 }

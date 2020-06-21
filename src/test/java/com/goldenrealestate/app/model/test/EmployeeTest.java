@@ -1,6 +1,5 @@
 package com.goldenrealestate.app.model.test;
 
-import com.fasterxml.classmate.AnnotationConfiguration;
 import com.goldenrealestate.app.model.Employee;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -9,22 +8,16 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.junit.Before;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.test.context.event.annotation.BeforeTestMethod;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
 @SpringBootTest
@@ -89,14 +82,14 @@ class EmployeeTest {
         Query q = session.createQuery("select emp from Employee emp");
         List employees = q.list();
         System.out.println("Reading Employee records...");
-        System.out.printf("%-30.30s  %-30.30s%n", "Name", "Contact Number");
+        System.out.printf("Name", "Contact Number");
         for (Object emp : employees) {
             Employee newEmp =(Employee) emp;
-            System.out.printf("%-30.30s  %-30.30s%n", newEmp.getEmployeeName(), newEmp.getContactNo());
+            System.out.printf(newEmp.getEmployeeName(), newEmp.getContactNo());
         }
     }
     @Before
-    public static SessionFactory createSessionFactory() {
+    public SessionFactory createSessionFactory() {
         Configuration configuration = new Configuration();
         configuration.configure();
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(

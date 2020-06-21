@@ -23,6 +23,10 @@
 
         <!-- Annotated entity classes -->
         <mapping class="com.goldenrealestate.app.model.Employee"/>
+        <mapping class="com.goldenrealestate.app.model.Defect"/>
+        <mapping class="com.goldenrealestate.app.model.Status"/>
+        <mapping class="com.goldenrealestate.app.model.Building"/>
+        <mapping class="com.goldenrealestate.app.model.ProgressBar"/>
 
 
     </session-factory>

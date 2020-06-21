@@ -2,8 +2,6 @@ package com.goldenrealestate.app.repository.dto;
 
 import com.goldenrealestate.app.model.Defect;
 
-import javax.persistence.Column;
-
 public class DefectDTO {
 
 

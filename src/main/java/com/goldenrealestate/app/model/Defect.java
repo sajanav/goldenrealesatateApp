@@ -13,8 +13,6 @@ public class Defect implements Serializable {
     @Column(name = "defectname")
     private String defectname;
 
-
-
     @Column(name = "defectdesc")
     private String defectdesc;
 

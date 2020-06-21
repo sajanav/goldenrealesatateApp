@@ -1,6 +1,5 @@
 package com.goldenrealestate.app.repository.dto;
 
-import com.goldenrealestate.app.model.Defect;
 import com.goldenrealestate.app.model.ProgressBar;
 
 public class ProgressBarDTO {
@@ -8,6 +7,16 @@ public class ProgressBarDTO {
     private String defectName;
     private String buildingName;
     private String status;
+
+    public long getProgressbarid() {
+        return progressbarid;
+    }
+
+    public void setProgressbarid(long progressbarid) {
+        this.progressbarid = progressbarid;
+    }
+
+    private long progressbarid;
 
     public String getEmployeeName() {
         return employeeName;
@@ -47,9 +56,6 @@ public class ProgressBarDTO {
         defectName   = progressBar.getDefect().getDefectname();
         buildingName =  progressBar.getBuilding().getBuildingname();
         status   =  progressBar.getStatus().getStatustype();
+        progressbarid =progressBar.getProgressbarid();
     }
-
-
-
-
 }

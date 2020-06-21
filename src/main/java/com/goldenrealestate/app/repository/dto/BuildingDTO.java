@@ -2,8 +2,6 @@ package com.goldenrealestate.app.repository.dto;
 
 import com.goldenrealestate.app.model.Building;
 
-import javax.persistence.Column;
-
 public class BuildingDTO {
 
 

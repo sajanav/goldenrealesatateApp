@@ -21,10 +21,10 @@ public class BuildingController {
     @GetMapping("/buildings")
     public ResponseEntity<List<Building>> getAllBuildings(@RequestParam(required = false) String title) {
         try {
-            List<Building> buildings = new ArrayList<Building>();
+            List<Building> buildings = new ArrayList<>();
 
             if (title == null)
-                buildingRepository.findAll().forEach(buildings::add);
+                buildings.addAll(buildingRepository.findAll());
 
             if (buildings.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);

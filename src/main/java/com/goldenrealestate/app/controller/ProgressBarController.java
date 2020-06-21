@@ -23,15 +23,13 @@ public class ProgressBarController {
     @GetMapping("/progressbar")
     public ResponseEntity<ProgressBarDetailsTO> getAllProgressBars(@RequestParam(required = false) String title) {
         try {
-            List<ProgressBar> progressBars = new ArrayList<ProgressBar>();
 
+            List<ProgressBar> progressBars = new ArrayList<>();
             if (title == null)
-                progressBarRepository.findAll().forEach(progressBars::add);
-
+                progressBars.addAll(progressBarRepository.findAll());
             if (progressBars.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
-
             return  new ResponseEntity<>(createProgressBarDTO(progressBars),HttpStatus.OK) ;
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -40,7 +38,7 @@ public class ProgressBarController {
 
     private ProgressBarDetailsTO createProgressBarDTO(List<ProgressBar> progressBars) {
         ProgressBarDetailsTO detailsTO = new ProgressBarDetailsTO();
-        List<ProgressBarDTO> progressBarsDTOs = new ArrayList<ProgressBarDTO>();
+        List<ProgressBarDTO> progressBarsDTOs = new ArrayList<>();
         for (ProgressBar progressBar : progressBars) {
            ProgressBarDTO progressBarDTO = new ProgressBarDTO(progressBar);
             progressBarsDTOs.add(progressBarDTO);

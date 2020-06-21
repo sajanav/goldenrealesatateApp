@@ -2,8 +2,6 @@ package com.goldenrealestate.app.repository.dto;
 
 import com.goldenrealestate.app.model.Employee;
 
-import javax.persistence.Column;
-
 public class EmployeeDTO {
 
 

@@ -22,10 +22,10 @@ public class DefectController {
     @GetMapping("/defects")
     public ResponseEntity<List<Defect>> getAllDefects(@RequestParam(required = false) String title) {
         try {
-            List<Defect> defects = new ArrayList<Defect>();
+            List<Defect> defects = new ArrayList<>();
 
             if (title == null)
-                defectRepository.findAll().forEach(defects::add);
+                defects.addAll(defectRepository.findAll());
 
             if (defects.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
