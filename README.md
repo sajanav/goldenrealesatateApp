@@ -59,7 +59,7 @@ Since this is spring boot first build the application
 
 1. mvn clean install -o -DskipTests=true --> i have omitted the junit test cases here 
 
-2. mvn spring-boot:run --> to run the application and you will see below code which confirms that your application is up and running 
+2. mvn spring-boot:run --> to run the application and you will see below message which confirms that your application is up and running 
 
 2020-06-21 15:56:00.791  INFO 17688 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
 2020-06-21 15:56:00.861  INFO 17688 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
