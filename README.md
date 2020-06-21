@@ -42,10 +42,11 @@ Features
 
 4. All the configuration details are mentioned in application.properties 
 
-5.its a simple and easy to maintain application 
+5. It's a simple and easy to maintain application 
 
 
 Issues faced 
+
 1. First time using PostgreSQL --> so took sometime to familiarise with same 
 
 2. Used spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5Dialect initially and later faced issued in connecting 
