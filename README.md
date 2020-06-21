@@ -84,7 +84,7 @@ Since this is spring boot first build the application
 3.  Happy coding !!
 
 
-
+NOTES : IDE I used is Intellij ULTIMATE -2020 
 
 
 
