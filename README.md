@@ -47,7 +47,6 @@ Issues faced
 2. Used spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5Dialect initially and later faced issued in connecting 
 so changed to spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL8Dialect
 
-3. I have used the inbuilt tomcat server for springboot application 
 
 How to run 
 
