@@ -39,6 +39,13 @@ public class ProgressBarTest {
     public SessionFactory createSessionFactory() {
         Configuration configuration = new Configuration();
         configuration.configure();
+
+        configuration.addAnnotatedClass(com.goldenrealestate.app.model.ProgressBar.class);
+        configuration.addAnnotatedClass(com.goldenrealestate.app.model.Employee.class);
+        configuration.addAnnotatedClass(com.goldenrealestate.app.model.Defect.class);
+        configuration.addAnnotatedClass(com.goldenrealestate.app.model.Building.class);
+        configuration.addAnnotatedClass(com.goldenrealestate.app.model.Status.class);
+
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(
                 configuration.getProperties()).build();
         SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);

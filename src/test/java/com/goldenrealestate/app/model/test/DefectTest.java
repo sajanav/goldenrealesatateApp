@@ -23,12 +23,12 @@ class DefectTest {
     @Test
     public void testOperations() {
         Session session = createSessionFactory().openSession();
-        create(session);
+     //   create(session);
         readAll(session);
-        updateByID(session);
-        readAll(session);
-        deleteByID(session);
-        readAll(session);
+       // updateByID(session);
+      //  readAll(session);
+      //  deleteByID(session);
+      //  readAll(session);
         session.close();
     }
 
@@ -77,6 +77,7 @@ class DefectTest {
     public SessionFactory createSessionFactory() {
         Configuration configuration = new Configuration();
         configuration.configure();
+        configuration.addAnnotatedClass(com.goldenrealestate.app.model.Defect.class);
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(
                 configuration.getProperties()).build();
         SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
