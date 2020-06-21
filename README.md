@@ -18,7 +18,8 @@
  
  I have referred the details from  site:https://bezkoder.com/ and my recent project in Emirates -Future CSR .
  
- Exposed Web services are tested and verified using Postman 
+ Exposed Web services are tested and verified using Postman https://www.postman.com/downloads/
+ 
  
  Listed are the available APIs in this release 
  
