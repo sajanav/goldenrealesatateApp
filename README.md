@@ -13,6 +13,8 @@
  
  PostgreSQL
  
+ Junit 
+ 
  Front end and back end will communicate via axios for http response/request .
  
  
