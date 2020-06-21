@@ -35,9 +35,13 @@
 Features 
 
 1. It follows MVC architecture 
-2.It has controller, model and repositories 
-3.I have incorporated Junit test cases so that it can be tested and verified 
-4.All the configuration details are mentioned in application.properties 
+
+2. It has controller, model and repositories 
+
+3. I have incorporated Junit test cases so that it can be tested and verified 
+
+4. All the configuration details are mentioned in application.properties 
+
 5.its a simple and easy to maintain application 
 
 
