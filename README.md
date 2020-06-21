@@ -63,7 +63,8 @@ How to run
 
 Since this is spring boot first build the application 
 
-1. mvn clean install -o -DskipTests=true --> i have omitted the junit test cases here 
+1. mvn clean install -o -DskipTests=true --> i have omitted the junit test cases here as build will take 4.475 seconds if your local      repo is ready --> you can run mvn clean install -o -DskipTests=false , build will run the junit test cases and complete in 15.28 seconds 
+
 
 2. mvn spring-boot:run --> to run the application and you will see below message which confirms that your application is up and running 
 
