@@ -1,5 +1,5 @@
 # goldenrealesatateApp
- This is the backend for GoldenRealEstate App.
+ This is the backend application for GoldenRealEstate App.
  
  It is built on 
  
