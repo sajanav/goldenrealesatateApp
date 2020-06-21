@@ -68,7 +68,9 @@ Since this is spring boot first build the application
 2020-06-21 15:56:02.049  INFO 17688 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-06-21 15:56:02.169  INFO 17688 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2020-06-21 15:56:02.171  INFO 17688 --- [           main] c.g.app.SpringBootDataJpaApplication     : Started SpringBootDataJpaApplication in 5.287 seconds (JVM running for 5.628)
-3.Happy coding !!
+
+
+3.  Happy coding !!
 
 
 
