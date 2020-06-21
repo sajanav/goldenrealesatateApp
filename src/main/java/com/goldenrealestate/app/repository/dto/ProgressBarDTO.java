@@ -4,50 +4,52 @@ import com.goldenrealestate.app.model.Defect;
 import com.goldenrealestate.app.model.ProgressBar;
 
 public class ProgressBarDTO {
-    private EmployeeDTO employeeDTO;
-    private DefectDTO defectDTO;
-    private BuildingDTO buildingDTO;
-    private StatusDTO statusDTO;
+    private String employeeName;
+    private String defectName;
+    private String buildingName;
+    private String status;
+
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
+    }
+
+    public String getDefectName() {
+        return defectName;
+    }
+
+    public void setDefectName(String defectName) {
+        this.defectName = defectName;
+    }
+
+    public String getBuildingName() {
+        return buildingName;
+    }
+
+    public void setBuildingName(String buildingName) {
+        this.buildingName = buildingName;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public ProgressBarDTO(ProgressBar progressBar) {
 
-        employeeDTO = new EmployeeDTO(progressBar.getEmployee());
-        defectDTO   = new DefectDTO(progressBar.getDefect());
-        buildingDTO = new BuildingDTO(progressBar.getBuilding());
-        statusDTO   = new StatusDTO(progressBar.getStatus());
+        employeeName = progressBar.getEmployee().getEmployeeName();
+        defectName   = progressBar.getDefect().getDefectname();
+        buildingName =  progressBar.getBuilding().getBuildingname();
+        status   =  progressBar.getStatus().getStatustype();
     }
 
 
-    public EmployeeDTO getEmployeeDTO() {
-        return employeeDTO;
-    }
 
-    public void setEmployeeDTO(EmployeeDTO employeeDTO) {
-        this.employeeDTO = employeeDTO;
-    }
-
-    public DefectDTO getDefectDTO() {
-        return defectDTO;
-    }
-
-    public void setDefectDTO(DefectDTO defectDTO) {
-        this.defectDTO = defectDTO;
-    }
-
-    public BuildingDTO getBuildingDTO() {
-        return buildingDTO;
-    }
-
-    public void setBuildingDTO(BuildingDTO buildingDTO) {
-        this.buildingDTO = buildingDTO;
-    }
-
-    public StatusDTO getStatusDTO() {
-        return statusDTO;
-    }
-
-    public void setStatusDTO(StatusDTO statusDTO) {
-        this.statusDTO = statusDTO;
-    }
 
 }
